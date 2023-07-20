@@ -1,19 +1,40 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
+    <navigation> </navigation>
+    <Banner/>
     <router-view/>
   </div>
 </template>
-
+<script> 
+import Nav from '@/components/Nav.vue'
+import Banner from '@/components/Banner.vue'
+export default {
+    name: 'nav-name',
+    // props: {},
+    data: function(){
+        return {}
+    },
+    // computed: {},
+    //methods: {}
+    // watch: {},
+    components: {
+      "navigation": Nav,
+      Banner,
+    },
+    // mixins: [],
+    // filters: {},
+    // -- Lifecycle Methods
+    // -- End Lifecycle Methods 
+}
+ </script>
 <style>
+body {
+  background: black;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
 
